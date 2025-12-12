@@ -1,0 +1,824 @@
+
+body{
+  background-color: rgb(255, 228, 202);
+  overflow: hidden;
+}
+
+.courseroomselection{
+  position: relative;
+}
+.courseroomselection .settingcourseroom{
+  position: absolute;
+  right: 20px;
+  bottom: 15px;
+  z-index: 6;
+  background-color: transparent;
+  border: none;
+
+}
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.gearcourse:hover{
+  animation: spin 4s linear infinite;
+}
+.hello{
+   /* background-color: rgb(246, 143, 0); */
+   border: 3px solid white;
+   font: 1em sans-serif;
+   color: white;
+   max-width: 400px;
+   height: 30px;
+   
+   padding-bottom: 20px;
+   text-align: center;
+   border-radius: 20px;
+   z-index: 5;
+   position: relative;
+   margin-bottom: 10px;
+   
+}
+
+.hello:hover {
+  background-color: rgb(255, 168, 46)
+}
+.hello .overlayhello{
+  position: absolute;
+  right: 0;
+  z-index: 2;
+  width: 95%;
+  height: 100%;
+  background-color: rgb(255, 168, 46);
+  border-radius: 20px;
+  padding-top: 10px;
+	max-height: 40px;
+	
+}
+.hello .overlayhello:hover{
+ width: 70%;
+ transition: width 1.0s ease;
+ background-color: (180deg, rgba(246, 143, 0,1) 0%, rgba(246, 143, 0,1)10%, #ffffff 10%, #ffffff 100%);
+}
+
+.hello .hellobg{
+  position: absolute;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+  background-position: left center;
+  
+  border-radius: 20px;
+}
+.hello .hellobg:hover{
+  background-size: 500px;
+}
+.popup {
+  position: absolute;
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+.popup-option {
+  display: block;
+  background: none;
+  border: none;
+  color: rgba(246, 143, 0,1);
+  padding: 5px 10px;
+  text-align: left;
+  cursor: pointer;
+  width: 100%;
+}
+
+.popup-option:hover {
+  background-color: #f1f1f1;
+}
+/*Chatting page*/
+.container{
+  display: flex;
+  height: 99vh;
+  margin-top: -8px;
+  margin-left: -10px;
+  width: 100vw;
+  overflow: hidden;
+}
+ .createroompopup{
+  position: fixed; 
+  left: 37vw;
+  top: 10vh;
+  width: 25vw;
+  height: 75vh;
+  background-color: rgb(255, 255, 255);
+  z-index: 11;
+  border-radius: 20px;
+  background: linear-gradient(180deg, rgba(246, 143, 0,1) 0%, rgba(246, 143, 0,1)10%, #ffffff 10%, #ffffff 100%);
+  border: rgba(246, 143, 0,1) solid 1px;
+}
+
+
+.createroompopup .title{
+  margin-top: 10px;
+  margin-left: 10px;
+  color: white;
+  
+}
+.createroompopup .titlecn{
+  
+  margin-left: 10px;
+  color: rgb(131, 131, 131);
+  
+}
+.createroompopup .inputtext{
+  width: 85%;
+  height: 5%;
+  margin-top: -50px;
+  margin-left: 10px;
+  border-radius: 10px;
+}
+.createroompopup .roomseleprofile{
+  width: 20vw;
+  height: 40vh;
+  border-radius: 10px;
+  border: 1px solid rgb(255, 206, 137);
+  margin-top: 1vh;
+  margin-left: 0.5vw;
+  background-color: rgb(255, 251, 247);
+  transition: background-color 0.3s ease;
+  
+}
+.createroompopup .roomseleprofile:hover{
+  background-color: rgb(255, 227, 196);
+}
+.createroompopup .confirm{
+  position: fixed;
+  width: 15%;
+  height: 7%;
+  bottom: 20vh;
+  left: 42vw;
+  border-radius: 10px;
+  border: none;
+  background-color:rgba(246, 143, 0,1) ;
+  color: white;
+}
+
+.createroompopup .confirm:hover{
+  background-color: rgb(255, 178, 106);
+}
+
+.createfolderpopup{
+  position: fixed; 
+  left: 37vw;
+  top: 10vh;
+  width: 25vw;
+  height: 75vh;
+  background-color: rgb(255, 255, 255);
+  z-index: 11;
+  border-radius: 20px;
+  background: linear-gradient(180deg, rgba(246, 143, 0,1) 0%, rgba(246, 143, 0,1)10%, #ffffff 10%, #ffffff 100%);
+  border: rgba(246, 143, 0,1) solid 1px;
+}
+
+.createfolderpopup .title{
+  margin-top: 10px;
+  margin-left: 10px;
+  color: white;
+  
+}
+
+.createfolderpopup .titlecn{
+  margin-left: 10px;
+  color: rgb(131, 131, 131);
+}
+.createfolderpopup .inputtext{
+  width: 85%;
+  height: 5%;
+  margin-top: -50px;
+  margin-left: 10px;
+  border-radius: 10px;
+}
+.createfolderpopup .confirm{
+  position: fixed;
+  width: 15%;
+  height: 7%;
+  bottom: 20vh;
+  left: 42vw;
+  border-radius: 10px;
+  border: none;
+  background-color:rgba(246, 143, 0,1) ;
+  color: white;
+}
+.createfolderpopup .confirm:hover{
+  background-color: rgb(255, 178, 106);
+}
+.overlay{
+  position: fixed;
+  background-color: black;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  opacity: 35%;
+}
+.invitepopup{
+  position: fixed; 
+  left: 37vw;
+  top: 35vh;
+  width: 25vw;
+  height: 20vh;
+  background-color: rgb(255, 255, 255);
+  z-index: 11;
+  border-radius: 20px;
+  background: linear-gradient(180deg, rgba(246, 143, 0,1) 0%, rgba(246, 143, 0,1)35%, #ffffff 10%, #ffffff 100%);
+  border: rgba(246, 143, 0,1) solid 1px;
+}
+.invitepopup .inviteheader{
+  display: flex;
+  justify-content: space-between;
+
+}
+.inviteheader .closeinvitemember{
+  border: solid white 2px;
+  background-color: rgb(246, 143, 0);
+  color: white;
+  border-radius: 10px;
+  margin-right: 10px;
+  margin-top: 10px;
+  width: 30px;
+  height: 30px;
+}
+.inviteheader .closeinvitemember:hover{
+  background-color: rgb(255, 167, 43);
+}
+.invitepopup .title{
+  margin-top: 10px;
+  margin-left: 10px;
+  color: white;
+  
+}
+.left {
+  width: 300px;
+  margin-right: 10px;
+ 
+}
+.left .lefttopbar{
+  background-color: rgb(255, 167, 43);
+  width: 400px;
+  height: 10vh;
+
+ 
+}
+.lefttopbar .searchbox{
+  padding: 7px;
+  margin-top:8px ;
+  width: 275px;
+  margin-left: 10px;
+  border-radius: 10px;
+  font-family: "Lucida Console", "Courier New", monospace;
+  border: none;
+}
+.lefttopbar .searchbutton{
+  margin-left: -65px;
+  border-radius: 10px;
+}
+.left .lefttopbar2{
+   margin-top: -25px;
+   margin-bottom: 20px;
+}
+.lefttopbar2 .buildnewcourse{
+  margin-left: 10px;
+  border-radius: 10px;
+  background-color: rgb(255, 167, 43);
+  border: none;
+  justify-content: center; /* Centers horizontally */
+  align-items: center;
+  
+}
+
+.lefttopbar2 .buildnewcourse:hover{
+  background-color: rgb(255, 191, 103);
+  
+}
+
+.left .roomelements{
+  height: 100vh;
+  
+}
+.left .roomelements:hover{
+  overflow-y: visible;    
+  overflow-x: hidden; 
+}
+.roomelements::-webkit-scrollbar {
+  width: 5px;
+  padding: 10px;
+}
+
+.roomelements::-webkit-scrollbar-thumb {
+  background: #ffffff;
+  border-radius: 10px;
+}
+
+
+.right {
+  flex: 3;
+  background-color: rgb(255, 220, 172); 
+  overflow: hidden;
+  flex-grow: 1;
+  position: relative;
+  
+}
+.right .righttopbar{
+  display: flex;
+  background-color: rgb(255, 158, 23);
+  height: 7vh;
+  margin-top: -20px;
+  padding-top: 10px;
+}
+.right .memberspage{
+  position: absolute;
+  right: 0;
+  width: 25vw;
+  height: 93vh;
+  background-color: rgb(255, 238, 214);
+  border: 1px white solid;
+  display: none;
+  z-index: 9;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+.memberspage .memberstyle{
+  padding: 10px;
+  margin: 5px;
+  border-radius: 5px;
+  background-color: rgb(255, 223, 179);
+}
+.memberspage .memberstyle:hover{
+  background-color: rgb(255, 195, 112);
+}
+.right .materialspage{
+  position: absolute;
+  right: 0;
+  width: 80vw;
+  height: 93vh;
+  background-color: rgb(255, 238, 214);
+  border: 1px white solid;
+  display: none;
+  z-index: 9;
+  overflow: auto;
+
+  
+}
+.materialspage .layout{
+  
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  gap: -10vw;
+  margin-left: 10px;
+ 
+}
+.crumb-link {
+  background: none;
+  border: none;
+  font-weight: bold;
+  font-size: 16px;
+  padding: 5px;
+  border-radius: 15px;
+}
+.crumb-link:hover {
+  cursor: pointer;
+  background-color: rgb(255, 195, 112);
+}
+.folderstyle{
+  width:8vw;
+  height:12vh;
+  margin-left: 10px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+
+
+}
+.folderimg{
+  max-width: 50px; /* Adjust the size as needed */
+  max-height: 50px;
+  margin-bottom: 5px; /* Add spacing below the image */
+  
+}
+.foldername{
+  font-size: 16px;
+  font-weight: bold;
+  
+}
+
+.folderstyle:hover{
+  background-color: rgb(255, 208, 142);
+}
+.folderbutton{
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 10px;
+  
+}
+.folderbutton:hover{
+  background-color: rgb(255, 222, 175);
+  
+}
+.uploadbutton{
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 10px;
+}
+.uploadbutton:hover{
+  background-color: rgb(255, 222, 175);
+  
+}
+.fileitemstyle{
+  border-radius: 10px;
+}
+.fileitemstyle:hover{
+  background-color: rgb(255, 222, 175)
+}
+.fullscreen-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9); /* Dark overlay */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000; /* Ensure it's above everything else */
+}
+
+.fullscreen-content {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 90%;
+  max-height: 90%;
+  text-align: center;
+  position: relative;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.close-preview-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 24px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #333;
+}
+
+.fullscreen-content img,
+.fullscreen-content video {
+  /* Styles applied via React, but this is a fallback */
+  width: auto;
+  height: auto;
+  object-fit: contain;
+}
+
+
+
+
+
+
+
+
+
+
+.roomtitle{
+  color: white;
+}
+
+.righttopbar .materials{
+  position: sticky;
+  left: 74vw;
+  border: none;
+  background-color: transparent;
+  border-radius: 10px;
+}
+.righttopbar .materials:hover{
+  background-color: rgb(255, 191, 103);
+}
+.righttopbar .members{
+  position: sticky;
+  left: 69vw;
+  border: none;
+  background-color: transparent;
+  border-radius: 10px;
+}
+.righttopbar .members:hover{
+  background-color: rgb(255, 191, 103);
+}
+
+.chat-container{
+  height: 87vh;
+  overflow: auto;
+  scrollbar-width: thin; 
+  scrollbar-color: #ffffff transparent;
+}
+.inputarea{
+  position: absolute;
+  bottom: 1vh;
+  background-color: rgb(255, 158, 23);
+  height: 4vh;
+  padding: 20px;
+  border-radius: 20px;
+  margin-left: 10px;
+  display: flex; 
+  align-items: center;
+
+}
+.inputarea .inputtext{
+   margin-left: 10px;
+   padding-bottom: 15px;
+   padding-top: 15px;
+   width: 60vmax;
+   align-self: center;
+   border-radius: 15px;
+   font-size: 15px;
+   border: none;
+   padding-left: 10px;
+}
+.inputarea .inputfile{
+  width: 65px;
+  height: 55px;
+  border-radius: 20px;
+  border: none;
+  display: flex;
+  justify-content: center; 
+  align-items: center; 
+}
+
+.inputfile .inputfileimg{
+  max-width: 31px;
+  transform: translateY(5%);
+  transition: transform 0.3s ease-in-out;
+}
+.inputfile .inputfileimg:hover{
+  transform: scale(1.2);
+}
+.file-preview {
+  position: absolute; /* Position it relative to the parent container */
+  bottom: 12vh; /* Adjust this value to position it above the inputarea */
+  left: 10px; /* Align it with the inputarea */
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.file-preview img,.file-preview video {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+.chat-message {
+  padding: 10px;
+  border-radius: 5px;
+  transition: background-color 0.2s ease;
+}
+
+.chat-message:hover {
+  background-color: rgb(255, 177, 69); /* Light gray background on hover */
+  cursor: pointer; /* Indicate interactivity */
+}
+.popup-menu {
+  position: absolute;
+  top: 20px; /* Adjust as needed */
+  right: 10px; /* Adjust as needed */
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  padding: 5px;
+}
+
+.popup-option {
+  display: block;
+  background: none;
+  border: none;
+  color: rgb(255, 158, 23);
+  padding: 5px 10px;
+  text-align: left;
+  cursor: pointer;
+  width: 100%;
+}
+
+.popup-option:hover {
+  background-color: #f1f1f1;
+}
+
+.inputarea .inputfile:hover{
+   background-color: rgb(255, 191, 103);
+}
+.inputarea .emoji{
+  width: 65px;
+  height: 55px;
+  border-radius: 20px;
+  margin-left: 10px;
+  border: none;
+}
+
+.emoji-picker {
+  position: absolute;
+  bottom: 60px;
+  left: 10px;
+  z-index: 1000;
+}
+
+.emojiimg{
+  width: 32px;
+  height: 32px;
+  transform: translateY(12.5%);
+  transition: transform 0.3s ease-in-out;
+}
+
+.emoji {
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  
+}
+.emojiimg:hover{
+  transform: scale(1.2);
+}
+
+.inputarea .emoji:hover{
+  background-color: rgb(255, 191, 103);
+  
+}
+.inputarea .send{
+  width: 65px;
+  height: 55px;
+  padding-bottom: 8px;
+  border-radius: 20px;
+  margin-left: 10px;
+  border: none;
+  background-color: transparent;
+  
+}
+.inputarea .send:hover{
+  background-color: rgb(255, 191, 103);
+}
+.sendimg{
+  width: 30px;
+  transform: translateY(15%);
+  transition: transform 0.3s ease-in-out;
+}
+.sendimg:hover{
+  transform: scale(1.2);
+}
+.image-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8); /* Dark overlay */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+
+.image-modal-content img {
+  
+  max-height: 100vh; /* Make the image fit the height of the website */
+  width: auto; /* Maintain aspect ratio */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 10px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+  
+}
+
+.image-modal:hover {
+  cursor: pointer; /* Close the modal when clicking anywhere */
+}
+/* Login area */
+
+.LoginContainer{
+  padding: 10vh;
+  padding-left: 35vmax;
+  
+}
+.LoginContainer .LoginBox{
+    background-color: rgb(246, 143, 0);
+    width: 500px;
+    height: 500px;
+    border-radius: 20px;
+    background: linear-gradient(180deg, rgba(246, 143, 0,1) 0%, rgba(246, 143, 0,1)18%, #ffffff 18%, #ffffff 100%);
+    border: 1px solid rgb(246, 143, 0);
+}
+.LoginContainer .buttonlogin{
+  background-color: rgb(246, 143, 0);
+  width: 250px;
+  height: 70px;
+  border-radius: 20px;
+  position: relative;
+  margin-top: 175px;
+  margin-left: 125px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 30px;
+  color:white;
+  
+  
+  
+}
+.LoginContainer .buttonlogin:hover{
+  color: #1d1d1d;
+}
+.LoginBox{
+  padding: 10px;
+}
+.LoginBox .Logintext{
+  color: white;
+  text-align: center;
+}
+.LoginBox .InputUsername{
+  width: 475px;
+  height: 40px;
+  border-radius: 10px;
+  margin-top: 20px;
+  font-size: 20px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.LoginBox .InputPassword{
+  width: 475px;
+  height: 40px;
+  border-radius: 10px;
+  margin-top: 20px;
+  font-size: 20px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.LoginBox .RegisNow{
+  font-size: 20px;
+  margin-top: 20px;
+}
+.LoginBox .RegisNow:hover{
+  color: rgb(246, 143, 0);
+}
+
+.statusMessage{
+  transform: translateY(200%); /* Initially move the element completely out of view below the container */
+  animation: slideUp 2s forwards;
+  color: red;
+  text-align: center;
+  font-family: Verdana, sans-serif;
+  margin-top: 10px;
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(200%); /* Start position: below the container */
+  }
+  to {
+    transform: translateY(0); /* End position: fully visible at the bottom */
+  }
+}
+/* Login area */
+/* Root:Register*/
+
+.LoginBox .Registertext{
+  color: white;
+  text-align: center;
+  margin-top: -6px;
+}
+
+.LoginBox .BackloginButton{
+  border: none;
+  padding: 5px;
+  border-radius: 10px;
+  
+}
+.LoginBox .BackloginButton:hover{
+  color: white;
+  background-color: rgb(166, 166, 166);
+}
